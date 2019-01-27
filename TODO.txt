@@ -1,4 +1,13 @@
-- Renders correctly
-- init state
-- setState (beforeEach and afterEach)
-- check if the children has been added to the DOM 
+- Create Wallet.js, which renders an input field with 2 buttons: DEPOSIT/ WITHDRAW
+- Add <Wallet /> to the App.js.
+- In <Wallet /> display the current balance from state.
+- DEPOSIT/WITHDRAW buttons should change the current balance and add the current amount to the history.
+- Create <WalletHistory /> to render the history.
+- Add <WalletHistory /> to <Wallet />
+
+Tests needed: 
+- Check if App renders (it has the <Wallet />).
+- Check if the <Wallet /> renders (it displays the current balance, has the buttons)
+- Check if the input updates the state correctly
+- Check if the DEPOSIT/WITHDRAW buttons works
+- Check if the WalletHistory renders the history

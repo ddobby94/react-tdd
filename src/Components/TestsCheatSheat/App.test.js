@@ -6,11 +6,11 @@ describe('App', () => {
   const app = shallow(<App />);
 
   it('renders properly', () => {
-    
+    expect(app).toMatchSnapshot();
   });
 
   it('contains a connected Wallet Component', () => {
-
+    expect(app.find('Connect(Wallet)').exists()).toBe(true);
   });
 
 });

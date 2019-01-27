@@ -13,14 +13,12 @@ describe('WalletHistory', () => {
 
   describe('When the user deposits some money', () => {
     const depositedAmount = 20;
-    const historyItem = { type: DEPOSIT, amount: depositedAmount };
-    
     beforeEach(() => {
-
+      walletHistory.setProps({ history: [{ type: DEPOSIT, amount: 20 }] });
     });
 
     it('Adds a new row', () => {
-
+      expect(walletHistory.find('.history-list').children().length).toEqual(1);
     });
   });
 });
