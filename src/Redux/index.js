@@ -23,12 +23,12 @@ const reducers = combineReducers({
 
 function logger({ getState }) {
   return next => action => {
-    console.log('will dispatch', action)
+    console.log('ACTION: ', action)
 
     // Call the next dispatch method in the middleware chain.
     const returnValue = next(action)
 
-    console.log('state after dispatch', getState())
+    console.log('NEW STATE: ', getState())
 
     // This will likely be the action itself, unless
     // a middleware further in chain changed it.
