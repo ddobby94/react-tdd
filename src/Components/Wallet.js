@@ -1,10 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withdraw, deposit } from '../Redux/balance';
+import { withdraw, deposit, DEPOSIT, WITHDRAW } from '../Redux/balance';
+import WalletHistory from './WalletHistory';
 
 export class Wallet extends React.Component {
   state = {
     balance: 0,
+    history: [],
+  }
+
+  deposit = () => {
+    const { history } = this.state;
+    history.push({ type: DEPOSIT, amount: this.state.balance });
+    this.setState({ history });
+    this.props.deposit(this.state.balance);
+  }
+
+  withdraw = () => {
+    const { history } = this.state;
+    history.push({ type: WITHDRAW, amount: this.state.balance });
+    this.setState({ history });
+    this.props.withdraw(this.state.balance);
   }
 
   render() {
@@ -19,13 +35,16 @@ export class Wallet extends React.Component {
         />
         <button 
           className="btn-deposit" 
-          onClick={() => this.props.deposit(this.state.balance)}
+          onClick={this.deposit}
           children="DEPOSIT"
         />
         <button 
           className="btn-withdraw" 
-          onClick={() => this.props.withdraw(this.state.balance)}
+          onClick={this.withdraw}
           children="WITHDRAW"
+        />
+        <WalletHistory 
+          history={this.state.history}
         />
       </div>
     );

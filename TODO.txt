@@ -1,0 +1,4 @@
+- Renders correctly
+- init state
+- setState (beforeEach and afterEach)
+- check if the children has been added to the DOM 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { DEPOSIT, WITHDRAW } from '../Redux/balance';
 import { Wallet } from './Wallet';
 
 describe('Wallet', () => {
@@ -31,22 +32,26 @@ describe('Wallet', () => {
     });
 
     describe('user wants to make deposit', () => {
+      const depositHistory = { type: DEPOSIT, amount: 20 };
       beforeEach(() => {
+        wallet.setState({ history: [], balance: 20 });
         wallet.find('.btn-deposit').simulate('click');
       });
 
       it('dispatches the deposit() in the props', () => {
-        expect(mockDeposit).toHaveBeenCalledWith(parseInt(userBalance, 10));
+        expect(wallet.state().history).toEqual([depositHistory]);
       });
     });
     
     describe('user wants to withdraw', () => {
+      const withdrawHistory = { type: WITHDRAW, amount: 20 };
       beforeEach(() => {
+        wallet.setState({ history: [], balance: 20 });
         wallet.find('.btn-withdraw').simulate('click');
       });
 
       it('dispatches the withdraw() in the props', () => {
-        expect(mockDeposit).toHaveBeenCalledWith(parseInt(userBalance, 10));
+        expect(wallet.state().history).toEqual([withdrawHistory]);
       });
     });
 
