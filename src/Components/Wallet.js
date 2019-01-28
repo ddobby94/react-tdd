@@ -7,15 +7,17 @@ import WalletHistory from './WalletHistory';
 
 export class Wallet extends React.Component {
   state = {
- 
+    balance: 0,
+    totalBalance: 0,
+    history: [],
   }
 
   deposit = () => {
-  
+
   }
 
   withdraw = () => {
-  
+    
   }
 
   render() {
@@ -25,7 +27,7 @@ export class Wallet extends React.Component {
           Wallet balance:
         </h3>
         <input 
-          className="input-wallet" 
+          className="input-wallet"
         />
         <button 
           className="btn-deposit" 

@@ -11,3 +11,8 @@ Tests needed:
 - Check if the input updates the state correctly
 - Check if the DEPOSIT/WITHDRAW buttons works
 - Check if the WalletHistory renders the history
+
+Flow:
+ - App.js
+ - Wallet.js
+ - WalletHistory.js
