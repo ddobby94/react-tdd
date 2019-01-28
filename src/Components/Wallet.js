@@ -25,7 +25,7 @@ export class Wallet extends React.Component {
     return (
       <div>
         <h3 className="balance">
-          Wallet balance:
+          Wallet balance: {this.props.balance}
         </h3>
         <input 
           className="input-wallet" 
@@ -50,7 +50,7 @@ export class Wallet extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  balance: state.balance.balance,
+  // balance: state.balance.balance,
 });
 
 export default connect(mapStateToProps, { withdraw, deposit })(Wallet)
