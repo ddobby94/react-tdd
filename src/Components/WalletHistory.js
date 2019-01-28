@@ -11,3 +11,4 @@ const WalletHistory = ({ history }) => (
 );
 
 export default WalletHistory;
+ 
