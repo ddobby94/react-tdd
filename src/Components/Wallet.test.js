@@ -5,14 +5,14 @@ import { Wallet } from './Wallet';
 
 describe('Wallet', () => {
   const props = {};
-  const wallet = shallow(<Wallet  {...props} />);
+  const wallet = shallow(<Wallet {...props} />);
 
   it('renders properly', () => {
     expect(wallet).toMatchSnapshot();
   });
   
   it('displays the balance from props', () => {
-    // TODO
+      // TODO
   });
 
   it('creates an input to deposit/withdraw', () => {
@@ -39,6 +39,10 @@ describe('Wallet', () => {
       it('updates history', () => {
         expect(wallet.state().history).toEqual([depositHistory]);
       });
+
+      it('dispatches an action', () => {
+        // TODO
+      })
     });
     
     describe('user wants to withdraw', () => {
@@ -51,6 +55,10 @@ describe('Wallet', () => {
       it('updates history', () => {
         expect(wallet.state().history).toEqual([withdrawHistory]);
       });
+
+      it('dispatches an action', () => {
+        // TODO
+      })
     });
 
   });

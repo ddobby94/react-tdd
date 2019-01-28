@@ -9,9 +9,11 @@
 TESTS needed:
   - Test all actions
   - Test all reducers
+  - Test new actions in <Wallet />
   - Test <Loot /> starts fetch & displays props
 
   flow: 
     - Redux/balance.js
     - Wallet.js
-    - 
+    - Redux/bitcoin.js
+    - Loot.js
