@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <h2 children="Loot Check" />
-        <Loot />
+        {/* <Loot /> */}
         <Wallet />
       </div>
     );

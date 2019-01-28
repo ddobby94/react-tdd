@@ -14,6 +14,6 @@ describe('App', () => {
   });
 
   it('contains a connected Loot Component', () => {
-    expect(app.find('Connect(Loot)').exists()).toBe(true);
+
   });
 });

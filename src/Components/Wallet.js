@@ -13,21 +13,19 @@ export class Wallet extends React.Component {
     const { history } = this.state;
     history.push({ type: DEPOSIT, amount: this.state.balance });
     this.setState({ history });
-    this.props.deposit(this.state.balance);
   }
 
   withdraw = () => {
     const { history } = this.state;
     history.push({ type: WITHDRAW, amount: this.state.balance });
     this.setState({ history });
-    this.props.withdraw(this.state.balance);
   }
 
   render() {
     return (
       <div>
         <h3 className="balance">
-          Wallet balance: {this.props.balance}
+          Wallet balance:
         </h3>
         <input 
           className="input-wallet" 
