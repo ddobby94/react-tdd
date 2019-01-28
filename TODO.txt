@@ -10,3 +10,8 @@ TESTS needed:
   - Test all actions
   - Test all reducers
   - Test <Loot /> starts fetch & displays props
+
+  flow: 
+    - Redux/balance.js
+    - Wallet.js
+    - 

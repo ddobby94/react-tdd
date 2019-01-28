@@ -3,15 +3,6 @@ import * as balance from './balance';
 describe('Balance Redux', () => {
   describe('Actions', () => {
 
-    it('creates an action to set balance', () => {
-      const initBalance = 0;
-    
-      const expectedAction = { type: balance.SET_BALANCE, balance: initBalance };
-    
-      // action create function
-      expect(balance.setBalance(initBalance)).toEqual(expectedAction)
-    });
-
     it('Creates an action to deposit into balance', () => {
       const deposit = 10;
 
@@ -31,19 +22,6 @@ describe('Balance Redux', () => {
   });
 
   describe('Reducer', () => {
-    describe('init', () => {
-      const newBalance = 10;
-  
-      it('sets a balance', () => {
-        const reducerObj = {
-          type: balance.SET_BALANCE,
-          balance: newBalance,
-        }
-  
-        expect(balance.balanceReducer(undefined, reducerObj).balance).toEqual(newBalance);
-      });
-  
-    });
 
     it('deposits into balance', () => {
       const deposit = 10;
