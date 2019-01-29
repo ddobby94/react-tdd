@@ -32,3 +32,18 @@ describe('BITCOIN REDUX', () => {
     });
   });
 });
+
+/**
+ * 
+ return (dispatch) => fetch(bitcoinAPI)
+    .then((response) => response.json())
+    .then((json) => dispatch({
+      type: FETCH_BITCOIN_SUCCESS,
+      bitcoin: { bpi: json.bpi },
+    }))
+    .catch((e) => dispatch({
+      type: FETCH_BITCOIN_ERROR,
+      error: e,
+    }))
+ * 
+ */
